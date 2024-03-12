@@ -30,13 +30,13 @@
     <script>
       const unorderedList = document.querySelector("ul");
       const input = document.querySelector("input");
-      const button = document.querySelector("button");
+      const addButton = document.querySelector("button");
+      let inputValue = "";
 
-      function addItem(e) {
-        const inputValue = input.textContent;
-      }
-
-      input.textContent = "";
+      addButton.addEventListener("click", () => {
+        inputValue = input.textContent;
+        input.textContent = "";
+      });
 
       const listItem = document.createElement("li");
       const span = document.createElement("span");
