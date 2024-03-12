@@ -44,6 +44,15 @@
 
       listItem.appendChild(span);
       listItem.appendChild(deleteButton);
+
+      span.textContent = input;
+      deleteButton.textContent = "Delete";
+
+      unorderedList.appendChild(listItem);
+
+      deleteButton.addEventListener("click", () => {
+        listItem.remove();
+      });
     </script>
   </body>
 </html>
