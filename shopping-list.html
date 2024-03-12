@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list example</title>
     <style>
       li {
@@ -17,21 +17,33 @@
     </style>
   </head>
   <body>
-
     <h1>My shopping list</h1>
 
     <div>
       <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item">
+      <input type="text" name="item" id="item" />
       <button>Add item</button>
     </div>
 
-    <ul>
-
-    </ul>
+    <ul></ul>
 
     <script>
+      const unorderedList = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
 
+      function addItem(e) {
+        const inputValue = input.textContent;
+      }
+
+      input.textContent = "";
+
+      const listItem = document.createElement("li");
+      const span = document.createElement("span");
+      const deleteButton = document.createElement("button");
+
+      listItem.appendChild(span);
+      listItem.appendChild(deleteButton);
     </script>
   </body>
 </html>
