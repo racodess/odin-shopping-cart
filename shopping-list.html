@@ -31,28 +31,29 @@
       const unorderedList = document.querySelector("ul");
       const input = document.querySelector("input");
       const addButton = document.querySelector("button");
-      let inputValue = "";
 
+      input.focus();
       addButton.addEventListener("click", () => {
-        inputValue = input.textContent;
-        input.textContent = "";
-        input.focus();
-      });
+        inputValue = input.value;
+        input.value = "";
 
-      const listItem = document.createElement("li");
-      const span = document.createElement("span");
-      const deleteButton = document.createElement("button");
+        const listItem = document.createElement("li");
+        const span = document.createElement("span");
+        const deleteButton = document.createElement("button");
 
-      listItem.appendChild(span);
-      listItem.appendChild(deleteButton);
+        listItem.appendChild(span);
+        listItem.appendChild(deleteButton);
 
-      span.textContent = inputValue;
-      deleteButton.textContent = "Delete";
+        span.textContent = inputValue;
+        deleteButton.textContent = "Delete";
 
-      unorderedList.appendChild(listItem);
+        unorderedList.appendChild(listItem);
 
-      deleteButton.addEventListener("click", () => {
-        listItem.remove();
+        deleteButton.addEventListener("click", () => {
+          listItem.remove();
+          input.focus();
+        });
+
         input.focus();
       });
     </script>
